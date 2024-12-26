@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<script src="https://kit.fontawesome.com/4bc90f4b5c.js" crossorigin="anonymous"></script>
+<body>
+    <header class="icon">
+        <!-- <a href="explore.html"><b><i class="fa-solid fa-arrow-right"></i></b></a> -->
+        <h1>Choose an Object</h1>
+    </header>
+    <main>
+        <div class="object-container">
+            <div class="object-card" onclick="selectObject('Solar System')">
+                <button onclick="ss()"><img src="C:\Users\gumma\OneDrive\Desktop\Genai\solar_system.jpg" alt="Solar System"></button>
+                <p>Solar System</p>
+            </div>
+            <div class="object-card" onclick="selectObject('Moon')">
+                <button  onclick="moon()"><img src="C:\Users\gumma\OneDrive\Desktop\Genai\moon.jpg" alt="Moon"></button>
+                <p>Moon</p>
+            </div>
+            <div class="object-card" onclick="selectObject('Sun')">
+                <button  onclick="sun()"><img src="C:\Users\gumma\OneDrive\Desktop\Genai\sun.jpg"  alt="Sun"></button>
+                <p>Sun</p>
+            </div>
+            <div class="object-card" onclick="selectObject('Astronaut')">
+                <button onclick="astronaut()"><img src="C:\Users\gumma\OneDrive\Desktop\Genai\astronut.jpg" alt="Astronaut"></button>
+                <p>Astronaut</p>
+            </div>
+            <div class="object-card" onclick="selectObject('Rocket')">
+                <button onclick="rocket()"><img src="C:\Users\gumma\OneDrive\Desktop\Genai\rocket.jpg" alt="Rocket"></button>
+                <p>Rocket</p>
+            </div>
+            <div class="object-card" onclick="selectObject('Satellite')">
+                <button onclick="satellite()"><img src="C:\Users\gumma\OneDrive\Desktop\Genai\satellite.jpg" alt="Satellite"></button>
+                <p>Satellite</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="selected-object">No object selected</p>
+    </footer>
+    <script src="explore.js"></script>
+</body>
+</html>

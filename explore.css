@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color:black;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #111;
+    border-bottom: 2px solid #333;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+.object-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 200px;
+   color:#000;
+
+}
+.object-card {
+    /* background-color: #222; */
+    background-color: bisque;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    color:#000;
+}
+.object-card:hover {
+    transform: scale(1.1);
+    /* background-color: #444; */
+    background-color: rgb(236, 57, 57);
+}
+
+.object-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.object-card p {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 5px;
+    background-color: #111;
+    border-top: 2px solid #333;
+}
+
+#selected-object {
+    font-size: 18px;
+    color: #00FF00;
+}
+button{
+    background-color:bisque;
+    border: none;
+    color:black;
+}
+button:hover{
+    background-color:rgb(236, 57, 57);
+}
+p{
+    color:black;
+}

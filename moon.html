@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moon</title>
+  <script src="https://kit.fontawesome.com/4bc90f4b5c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at center, #000428, #004e92);
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .info {
+      margin-left: 40px;
+      text-align: left;
+      max-width: 40%;
+    }
+    .info h1 {
+      margin-bottom: 10px;
+    }
+    .info ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .info ul li {
+      margin-bottom: 5px;
+    }
+    .media-container {
+      position: relative;
+      margin-right: 50px;
+    }
+    .planet-image {
+      width: 600px;
+      height: auto;
+      opacity: 0.6;
+    }
+    header{
+        float:left;
+        display: flex;
+    justify-content: space-between;
+    }
+    a{
+       text-decoration: none; 
+       color:rgb(88, 88, 249);
+    }
+    .planet-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      z-index: -1;
+    }
+    .stars div {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <header><a href="explore.html"><b><i class="fa-solid fa-arrow-right"></i></b></a></header>
+    <h1><b>MOON</b></h1>
+    <p>
+      The Moon is a fascinating celestial body and Earth's only natural satellite. Here is some detailed content about the Moon
+    </p>
+    <h2>Key Features:</h2>
+    <ul>
+    <li>Diameter: About 3,474 km (about 27% of Earth's diameter)</li>
+    <li>Orbital Period: About 27.3 Earth days</li>
+    <li>Day Length: About 29.5 Earth days (same as its orbital period, resulting in the same side always facing Earth)</li>
+    <li>Surface Temperature: Ranges from -173°C at night to 127°C during the day</li>
+    </ul>
+    <h2>Interesting Facts:</h2>
+    <ul>
+      <li> Tidal Locking: The Moon is tidally locked to Earth, meaning the same side always faces our planet.</li>
+
+        <li>Lunar Phases: The Moon goes through a cycle of phases, from new moon to full moon and back, every 29.5 days.</li>
+
+       <li> Exploration: The first manned Moon landing was in 1969 during NASA's Apollo 11 mission. A total of 12 astronauts have walked on the Moon.</li>
+
+        <li>No Atmosphere: Due to its weak gravity, the Moon cannot hold onto an atmosphere, leading to extreme temperature variations.</li>
+
+       <li> Formation: The most widely accepted theory is that the Moon formed from the debris left after a Mars-sized body collided with Earth about 4.5 billion years ago.</li>
+    </ul>
+  </div>
+  <div class="media-container">
+    <img src="mercury.png.jpg" alt="Mercury" class="planet-image">
+    
+    <video class="planet-video" autoplay loop muted>
+      <source src="moon.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Stars Background -->
+  <div class="stars">
+    <script>
+      // Generate stars dynamically
+      const starsContainer = document.querySelector('.stars');
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        const size = Math.random() * 2 + 1 + 'px';
+        star.style.width = size;
+        star.style.height = size;
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        starsContainer.appendChild(star);
+      }
+    </script>
+  </div>
+</body>
+</html>
