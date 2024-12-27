@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Satellite</title>
+  <script src="https://kit.fontawesome.com/4bc90f4b5c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at center, #000428, #004e92);
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    header{
+        float:left;
+        display: flex;
+    justify-content: space-between;
+    }
+    a{
+       text-decoration: none; 
+       color:rgb(88, 88, 249);
+    }
+    .info {
+      margin-left: 40px;
+      text-align: left;
+      max-width: 40%;
+    }
+    .info h1 {
+      margin-bottom: 10px;
+    }
+    .info ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .info ul li {
+      margin-bottom: 5px;
+    }
+    .media-container {
+      position: relative;
+      margin-right: 50px;
+    }
+    .planet-image {
+      width: 600px;
+      height: auto;
+      opacity: 0.6;
+    }
+    .planet-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      z-index: -1;
+    }
+    .stars div {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <header><a href="explore.html"><b><i class="fa-solid fa-arrow-right"></i></b></a></header>
+    <h1><b>SATELLITE</b></h1>
+    <p>
+      
+      Satellites are fascinating objects that have revolutionized how we observe and interact with our planet and the universe. 
+    </p>
+    <h2>Key Features:</h2>
+    <ul>
+  
+  <li>Low Earth Orbit (LEO): Between 160 and 2,000 kilometers above Earth. Common for imaging and communication satellites.</li>
+  <li>Medium Earth Orbit (MEO): Between 2,000 and 35,786 kilometers. Often used for navigation satellites like GPS.</li>
+  <li>Geostationary Orbit (GEO): At about 35,786 kilometers, where the satellite orbits Earth at the same rate the planet rotates, appearing stationary over a specific location. Used for weather and communication satellites</li>
+ 
+      
+      
+      
+    </ul>
+    <h2>Interesting Facts:</h2>
+    <ul>
+      <li>First Satellite: Sputnik 1, launched by the Soviet Union in 1957, was the first artificial satellite to orbit Earth.</li>
+      <li>Global Positioning System (GPS): A network of at least 24 satellites provides accurate location and timing information globally.</li>
+      <li>Weather Satellites: Satellites like GOES and METEOSAT provide critical data for weather forecasting and monitoring natural disasters.</li>
+      <li>Imaging and Remote Sensing: Satellites like Landsat and Sentinel capture high-resolution images of Earth's surface, aiding in environmental monitoring, agriculture, and urban planning.</li>
+      
+    </ul>
+  </div>
+  <div class="media-container">
+    <img src="satellite.jpg" alt="Mercury" class="planet-image">
+    
+    <video class="planet-video" autoplay loop muted>
+      <source src="satellite.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Stars Background -->
+  <div class="stars">
+    <script>
+      // Generate stars dynamically
+      const starsContainer = document.querySelector('.stars');
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        const size = Math.random() * 2 + 1 + 'px';
+        star.style.width = size;
+        star.style.height = size;
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        starsContainer.appendChild(star);
+      }
+    </script>
+  </div>
+</body>
+</html>

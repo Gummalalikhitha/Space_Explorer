@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>solar_system</title>
+  <script src="https://kit.fontawesome.com/4bc90f4b5c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at center, #000428, #004e92);
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    header{
+        float:left;
+        display: flex;
+    justify-content: space-between;
+    }
+    a{
+       text-decoration: none; 
+       color:rgb(88, 88, 249);
+    }
+    .info {
+      margin-left: 40px;
+      text-align: left;
+      max-width: 40%;
+    }
+    .info h1 {
+      margin-bottom: 10px;
+    }
+    .info ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .info ul li {
+      margin-bottom: 5px;
+    }
+    .media-container {
+      position: relative;
+      margin-right: 50px;
+    }
+    .planet-image {
+      width: 600px;
+      height: auto;
+      opacity: 0.6;
+    }
+    .planet-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      z-index: -1;
+    }
+    .stars div {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <header><a href="explore.html"><b><i class="fa-solid fa-arrow-right"></i></b></a></header>
+    <h1>SOLAR SYSTEM</h1>
+    <p>
+      The solar system is a wondrous collection of celestial objects, all orbiting our Sun. Here's a comprehensive look at its key features and some fascinating facts:
+
+    </p>
+    <h2>Key Features:</h2>
+    <ul>
+      <li>The Sun: The central star and the main source of energy for the solar system. It makes up 99.86% of the total mass of the solar system.
+      </li>
+      <li>Dwarf Planets: Pluto, Eris, Haumea, Makemake, and Ceres are some of the recognized dwarf planets in our solar system.
+      </li>
+      <li>Moons: There are over 200 known moons orbiting the planets and dwarf planets, with notable ones including Earth's Moon, Jupiter's Ganymede, and Saturn's Titan.
+      </li>
+      <li>Asteroids: Mostly found in the asteroid belt between Mars and Jupiter, these are rocky remnants from the early solar system.
+      </li>
+      
+      
+    </ul>
+    <h2>Interesting Facts:</h2>
+    <ul>
+      <li>Age: The solar system is about 4.6 billion years old.</li>
+      <li>Solar Orbit: It takes about 225-250 million years for the solar system to complete one orbit around the Milky Way's center.
+      </li>
+      <li>Jupiter's Influence: Jupiter's massive gravity can affect the orbits of other objects in the solar system, including asteroids and comets.
+      </li>
+      
+    </ul>
+  </div>
+  <div class="media-container">
+    <img src="mercury.png.jpg" alt="Mercury" class="planet-image">
+    
+    <video class="planet-video" autoplay loop muted>
+      <source src="solar systerm video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Stars Background -->
+  <div class="stars">
+    <script>
+      // Generate stars dynamically
+      const starsContainer = document.querySelector('.stars');
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        const size = Math.random() * 2 + 1 + 'px';
+        star.style.width = size;
+        star.style.height = size;
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        starsContainer.appendChild(star);
+      }
+    </script>
+  </div>
+</body>
+</html>

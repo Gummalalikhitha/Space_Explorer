@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rocket</title>
+  <script src="https://kit.fontawesome.com/4bc90f4b5c.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: radial-gradient(circle at center, #000428, #004e92);
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    header{
+        float:left;
+        display: flex;
+    justify-content: space-between;
+    }
+    a{
+       text-decoration: none; 
+       color:rgb(88, 88, 249);
+    }
+    .info {
+      margin-left: 40px;
+      text-align: left;
+      max-width: 40%;
+    }
+    .info h1 {
+      margin-bottom: 10px;
+    }
+    .info ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .info ul li {
+      margin-bottom: 5px;
+    }
+    .media-container {
+      position: relative;
+      margin-right: 50px;
+    }
+    .planet-image {
+      width: 600px;
+      height: auto;
+      opacity: 0.6;
+    }
+    .planet-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: transparent;
+      z-index: -1;
+    }
+    .stars div {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <header><a href="explore.html"><b><i class="fa-solid fa-arrow-right"></i></b></a></header>
+    <h1><b>ROCKET</b></h1>
+    <p>
+        Rockets are incredible vehicles designed to travel through the atmosphere and into space. They play a vital role in space exploration, satellite deployment, and even potential interplanetary travel.
+    </p>
+    <h2>Key Features:</h2>
+    <ul>
+      <li>Propulsion System: The heart of a rocket, responsible for generating thrust to propel the rocket forward. It includes engines that burn fuel to produce high-speed exhaust gases.</li>
+      <li>Stages: Rockets are often built in stages that detach after their fuel is exhausted. Each stage helps reduce weight and increase efficiency as the rocket ascends.</li>
+      <li>Fuel Tanks: These store the rocket's propellant, which can be either liquid or solid. The choice of fuel affects the rocket's performance and design.</li>
+    </ul>
+    <h2>Interesting Facts:</h2>
+    <ul>
+      <li>History: The first successful liquid-fueled rocket was launched by Robert Goddard in 1926.</li>
+      <li>Saturn V: The Saturn V rocket, used during the Apollo missions, remains the most powerful rocket ever built, capable of sending astronauts to the Moon.</li>
+      <li>Sound and Heat: Rockets produce intense sound and heat during liftoff. The noise can reach levels of 200 decibels, and the exhaust gases can reach temperatures of over 3,000 degrees Celsius</li>
+      
+    </ul>
+  </div>
+  <div class="media-container">
+    <img src="rocket.jpg" alt="Mercury" class="planet-image">
+    
+    <video class="planet-video" autoplay loop muted>
+      <source src="rocket.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Stars Background -->
+  <div class="stars">
+    <script>
+      // Generate stars dynamically
+      const starsContainer = document.querySelector('.stars');
+      for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        const size = Math.random() * 2 + 1 + 'px';
+        star.style.width = size;
+        star.style.height = size;
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        starsContainer.appendChild(star);
+      }
+    </script>
+  </div>
+</body>
+</html>
